@@ -1,0 +1,9 @@
+{% extends "index.html"%} {% block content%}
+<div id="content" class="container" style="width: {{50*8}}px">
+  {% for i in range(column): %} {% for j in range(8): %} {% if (j+i)%2 != 0 %}
+  <div class="box" style="background-color: yellow"></div>
+  {% else %}
+  <div class="box"></div>
+  {% endif %} {% endfor %} {% endfor %}
+</div>
+{%endblock%}
